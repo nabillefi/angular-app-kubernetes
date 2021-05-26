@@ -6,5 +6,5 @@ RUN npm install
 RUN npm run build --prod
 
 # stage 2
-FROM nginx:alpine
+FROM nginx:1.21-alpine
 COPY --from=node /app/dist/angular-app /usr/share/nginx/html
